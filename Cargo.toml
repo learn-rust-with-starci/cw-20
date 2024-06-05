@@ -1,6 +1,5 @@
 [package]
 name = "cw-20"
-version.workspace = true
 authors = ["Ethan Frey <ethanfrey@users.noreply.github.com>"]
 edition = "2021"
 description = "Basic implementation of a CosmWasm-20 compliant token"
@@ -12,21 +11,17 @@ documentation = "https://docs.cosmwasm.com"
 [lib]
 crate-type = ["cdylib", "rlib"]
 
-[features]
-# use library feature to disable all instantiate/execute/query exports
-library = []
-
 [dependencies]
-cosmwasm-schema = { workspace = true }
-cw2 = { workspace = true }
-cw20 = { workspace = true }
-cw-storage-plus = { workspace = true }
-cosmwasm-std = { workspace = true }
-schemars = { workspace = true }
-semver = { workspace = true }
-serde = { workspace = true }
-thiserror = { workspace = true }
+cosmwasm-schema = { version = "*" }
+cw2 = { version = "*" }
+cw20 = { version = "*" }
+cw-storage-plus = { version = "*" }
+cosmwasm-std = { version = "*" }
+schemars = { version = "*" }
+semver = { version = "*" }
+serde = { version = "*" }
+thiserror = { version = "*" }
 
 [dev-dependencies]
-cw-multi-test = { workspace = true }
-cw-utils = { workspace = true }
+cw-multi-test = { version = "*" }
+cw-utils = { version = "*" }
